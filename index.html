@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Fruits CRUD</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-0 offset-md-3">
+                <div class="card my-3">
+                    <div class="card-header">
+                        <p class="m-0 fs-3 fw-bold">Add Product</p>
+                    </div>
+                    <form onsubmit="addProduct(event)">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="p_name" class="form-label">Product name</label>
+                                <input required type="text" class="form-control" id="p_name" name="fruit_name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="p_price" class="form-label">Product price</label>
+                                <input required type="text" class="form-control" id="p_price" name="fruit_price">
+                            </div>
+                            <div class="mb-3">
+                                <label for="p_weight" class="form-label">Product weight</label>
+                                <input required type="text" class="form-control" id="p_weight" name="fruit_weight">
+                            </div>
+                        </div>
+                        <div class="card-footer text-end">
+                            <button class="btn btn-success">
+                                Send
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 py-4 offset-0 offset-md-2">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Product name</th>
+                            <th>Price</th>
+                            <th>Weight</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
